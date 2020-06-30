@@ -8,3 +8,5 @@ c:\users\alissongoulart\documents\visual studio 2012\Projects\uitest\uitest\obj\
 c:\users\alissongoulart\documents\visual studio 2012\Projects\uitest\uitest\obj\Debug\uitest.exe
 c:\users\alissongoulart\documents\visual studio 2012\Projects\uitest\uitest\obj\Debug\uitest.pdb
 c:\users\alissongoulart\documents\visual studio 2012\Projects\uitest\uitest\obj\Debug\uitest.Form2.resources
+C:\Users\alissongoulart\documents\visual studio 2012\Projects\uitest\uitest\obj\Debug\uitest.Form3.resources
+C:\Users\alissongoulart\documents\visual studio 2012\Projects\uitest\uitest\obj\Debug\uitest.Form4.resources

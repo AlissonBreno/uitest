@@ -24,7 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelLeft = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
@@ -48,14 +48,18 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panelLeft.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -69,20 +73,22 @@
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panelDesktop.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelLeft
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(72)))));
-            this.panel1.Controls.Add(this.panel9);
-            this.panel1.Controls.Add(this.panel8);
-            this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(262, 728);
-            this.panel1.TabIndex = 0;
+            this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(72)))));
+            this.panelLeft.Controls.Add(this.panel9);
+            this.panelLeft.Controls.Add(this.panel8);
+            this.panelLeft.Controls.Add(this.panel7);
+            this.panelLeft.Controls.Add(this.panel2);
+            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelLeft.Location = new System.Drawing.Point(0, 0);
+            this.panelLeft.Name = "panelLeft";
+            this.panelLeft.Size = new System.Drawing.Size(262, 728);
+            this.panelLeft.TabIndex = 0;
             // 
             // panel9
             // 
@@ -291,6 +297,7 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel18
             // 
@@ -321,6 +328,7 @@
             this.button2.Text = "Cadastro de Processos Jurídicos";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel12
             // 
@@ -369,11 +377,13 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(262, 85);
             this.panel2.TabIndex = 1;
+            this.panel2.Click += new System.EventHandler(this.panel2_Click);
             // 
             // panel4
             // 
             this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel4.Enabled = false;
             this.panel4.Location = new System.Drawing.Point(24, 7);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(211, 70);
@@ -386,60 +396,90 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(262, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1108, 85);
+            this.panel3.Size = new System.Drawing.Size(1104, 85);
             this.panel3.TabIndex = 1;
             // 
             // panel6
             // 
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel6.Controls.Add(this.panel5);
+            this.panel6.Controls.Add(this.panel11);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(928, 0);
+            this.panel6.Location = new System.Drawing.Point(889, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(180, 85);
+            this.panel6.Size = new System.Drawing.Size(215, 85);
             this.panel6.TabIndex = 3;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.label1);
+            this.panel11.Controls.Add(this.panel20);
+            this.panel11.Controls.Add(this.panel5);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(200, 85);
+            this.panel11.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(23, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 25);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Jose";
+            // 
+            // panel20
+            // 
+            this.panel20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel20.BackgroundImage")));
+            this.panel20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel20.Location = new System.Drawing.Point(81, 9);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(75, 70);
+            this.panel20.TabIndex = 3;
             // 
             // panel5
             // 
             this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel5.Location = new System.Drawing.Point(3, 18);
+            this.panel5.Location = new System.Drawing.Point(166, 34);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(152, 61);
+            this.panel5.Size = new System.Drawing.Size(20, 20);
             this.panel5.TabIndex = 2;
             this.panel5.Click += new System.EventHandler(this.panel5_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(76)))), ((int)(((byte)(130)))));
-            this.label1.Location = new System.Drawing.Point(319, 102);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(437, 106);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Bem vindo,";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(76)))), ((int)(((byte)(130)))));
-            this.label2.Location = new System.Drawing.Point(729, 102);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 106);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "José";
-            // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(195)))), ((int)(((byte)(99)))));
-            this.panel10.Location = new System.Drawing.Point(337, 205);
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(262, 85);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(419, 5);
-            this.panel10.TabIndex = 4;
+            this.panel10.Size = new System.Drawing.Size(1104, 3);
+            this.panel10.TabIndex = 2;
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.Controls.Add(this.panel21);
+            this.panelDesktop.Controls.Add(this.label4);
+            this.panelDesktop.Controls.Add(this.panel22);
+            this.panelDesktop.Controls.Add(this.label2);
+            this.panelDesktop.Controls.Add(this.label3);
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(262, 88);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(1104, 640);
+            this.panelDesktop.TabIndex = 3;
+            // 
+            // panel21
+            // 
+            this.panel21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel21.BackgroundImage")));
+            this.panel21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel21.Location = new System.Drawing.Point(643, 208);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(400, 400);
+            this.panel21.TabIndex = 19;
             // 
             // label4
             // 
@@ -447,50 +487,61 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(76)))), ((int)(((byte)(130)))));
-            this.label4.Location = new System.Drawing.Point(337, 213);
+            this.label4.Location = new System.Drawing.Point(79, 144);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(353, 28);
-            this.label4.TabIndex = 6;
+            this.label4.TabIndex = 18;
             this.label4.Text = "18:55:09 - Tuesday, December 19, 2019";
             // 
-            // panel11
+            // panel22
             // 
-            this.panel11.BackColor = System.Drawing.Color.Transparent;
-            this.panel11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel11.BackgroundImage")));
-            this.panel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel11.Location = new System.Drawing.Point(1080, 85);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(269, 87);
-            this.panel11.TabIndex = 8;
+            this.panel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(195)))), ((int)(((byte)(99)))));
+            this.panel22.Location = new System.Drawing.Point(79, 136);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(419, 5);
+            this.panel22.TabIndex = 17;
             // 
-            // panel20
+            // label2
             // 
-            this.panel20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel20.BackgroundImage")));
-            this.panel20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel20.Location = new System.Drawing.Point(901, 277);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(400, 400);
-            this.panel20.TabIndex = 9;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(76)))), ((int)(((byte)(130)))));
+            this.label2.Location = new System.Drawing.Point(471, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(197, 106);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "José";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(76)))), ((int)(((byte)(130)))));
+            this.label3.Location = new System.Drawing.Point(61, 33);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(437, 106);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Bem vindo,";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1370, 728);
-            this.Controls.Add(this.panel20);
-            this.Controls.Add(this.panel11);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(1366, 728);
+            this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panel10);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelLeft);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.panel1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.Form2_Load);
+            this.panelLeft.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
@@ -504,14 +555,17 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panelDesktop.ResumeLayout(false);
+            this.panelDesktop.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelLeft;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
@@ -536,11 +590,15 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Panel panelDesktop;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
